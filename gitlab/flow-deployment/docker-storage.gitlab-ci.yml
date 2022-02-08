@@ -1,0 +1,10 @@
+register:
+  only:
+    refs: 
+    - <branch name>
+  image: $IMAGE_URL
+  variables: 
+    KEY: $PREFECT_API_KEY
+    script:
+    - prefect auth login -t $KEY
+    - prefect register -p flow.py --project <project_name>
