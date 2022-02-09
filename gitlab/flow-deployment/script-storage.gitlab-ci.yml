@@ -1,0 +1,14 @@
+register:
+  only:
+    refs: 
+    - master
+  tags:
+        - linux
+  image: prefecthq/prefect:0.14.17-python3.7
+  variables: 
+    KEY: $PREFECT_API_KEY
+  before_script:
+  - pip install -r requirements.txt
+    script:
+    - prefect auth login -t $KEY
+    - prefect register -p flow.py --project <project_name>
