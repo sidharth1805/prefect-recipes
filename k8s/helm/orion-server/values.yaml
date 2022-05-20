@@ -9,7 +9,7 @@ api:
     port: 4200
 
   ingress:
-    enabled: true
+    enabled: false
     className: ""
     annotations: {}
       # kubernetes.io/ingress.class: nginx
@@ -22,7 +22,7 @@ api:
     tls: []
 
   replicaCount: 1
-
+  # -- API image
   image:
     name: prefecthq/prefect
     pullPolicy: IfNotPresent
@@ -30,7 +30,7 @@ api:
     tag: 2.0b3-python3.8
 
   debug_enabled: false
-
+  # -- Horizontal Pod Autoscaler confiuration
   autoscaling:
     enabled: false
     minReplicas: 1
@@ -58,7 +58,7 @@ api:
     # runAsUser: 1000
 
   resources: {}
-
+# -- Postgres configuration
 postgresql:
   postgresqlDatabase: prefect
 

@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "orion.fullname" . }}-api
+  name: {{ include "orion.fullname" . }}
   labels:
     {{- include "orion.labels" . | nindent 4 }}
 spec:
