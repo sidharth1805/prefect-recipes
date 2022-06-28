@@ -1,0 +1,3 @@
+#Rename this file to "terraform.tfvars" and copy to the root module.
+#*.tfvars are excluded via .gitignore by default for security.
+api_key = "abc123apikey"

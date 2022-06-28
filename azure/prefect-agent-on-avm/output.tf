@@ -2,11 +2,10 @@ output "resource_group_name" {
   value = azurerm_resource_group.rg.name
 }
 
-output "public_ip_address" {
-  value = azurerm_linux_virtual_machine.prefectagentvm.public_ip_address
+output "resource_group_location" {
+  value = azurerm_resource_group.rg.location
 }
 
-output "tls_private_key" {
-  value     = tls_private_key.example_ssh.private_key_pem
-  sensitive = true
+output "public_ip" {
+    value = "azureuser@${module.vm_deploy.public_ip}"
 }

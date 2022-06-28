@@ -8,6 +8,11 @@ variable "resource_group_location" {
   description = "Location of the resource group."
 }
 
+variable "env_tier" {
+  default     = "dev"
+  description = "Tier of the environment (Dev/Stage/Test/Prod)"
+}
+
 variable "vnet_name" {
   type        = string
   default     = "prefectVnet"
@@ -59,30 +64,12 @@ variable "default_nsg" {
   }
 }
 
-variable "source_image" {
-  description = "Standard configuration Azure VM"
-  type = object({
-    publisher = string
-    offer     = string
-    sku       = string
-    version   = string
-  })
-  default = {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts-gen2"
-    version   = "latest"
-  }
+variable "prefect_url" {
+  type        = string
+  default     = "http://beta.prefect.io/"
+  description = "URL for the Prefect Cloud API"
 }
 
-variable "admin_user" {
-  type        = string
-  default     = "azureuser"
-  description = "The default user for the configured azure vm"
-}
-
-variable "default_queue" {
-  type        = string
-  default     = "default"
-  description = "The default work queue used to start and configure the prefect agent"
+variable "api_key" {
+  description = "API Key to connect. Set in terraform.tfvars."
 }
