@@ -8,3 +8,9 @@
 terraform.*
 **.tgz
 Chart.lock
+.env
+
+**deployment.yaml
+**.prefectignore
+
+**/__pycache__
