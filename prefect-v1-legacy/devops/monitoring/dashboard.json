@@ -190,7 +190,7 @@
             "uid": "prometheus"
           },
           "exemplar": true,
-          "expr": "sum(prefect_flows_upcoming{project_name=~\"$project\"})",
+          "expr": "sum(prefect_flowruns_upcoming{project_name=~\"$project\"})",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -270,7 +270,7 @@
             "uid": "prometheus"
           },
           "exemplar": true,
-          "expr": "sum(prefect_flows_runs_running{project_name=~\"$project\"})",
+          "expr": "sum(prefect_flowruns_running) by (project_name)",
           "instant": false,
           "interval": "",
           "legendFormat": "",
