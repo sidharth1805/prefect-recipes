@@ -29,7 +29,7 @@ What are you interested in seeing examples of? [Jot down your big idea here.](ht
   - [Parameters](#parameters)
   - [Testing](#testing)
   - [Triggering Flow Runs](#triggering-flow-runs)
-  - [Deployments](#deployments)
+  - [Flow Deployment](#flow-deployment)
 
 - [Diving Deeper](#diving-deeper-)
   - [Data Engineering / DataOps](#data-engineering--dataops)
