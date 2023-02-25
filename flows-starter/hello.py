@@ -14,7 +14,7 @@ def hello(block_name: str = "name"):
 
     """
     name = String.load(block_name)
-    print(f"Hello {name.value}!")
+    print(f"hello {name.value}!")
 
     if "Expert" not in name.value:
         print("You're about to become a Prefect expert!")
